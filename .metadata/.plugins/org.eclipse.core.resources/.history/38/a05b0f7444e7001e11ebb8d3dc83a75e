@@ -1,0 +1,15 @@
+package com.boost.springboostupex.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.boost.springboostupex.dao.MemberDao;
+import com.boost.springboostupex.dto.Member;
+@Service
+public class MemberService {
+	@Autowired
+	private MemberDao memberDao;
+	
+	public void insert(Member member) {
+		return memberDao.insert();
+	}
+}

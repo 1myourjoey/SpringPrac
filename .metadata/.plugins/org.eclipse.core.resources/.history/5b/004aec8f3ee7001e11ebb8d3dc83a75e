@@ -1,0 +1,18 @@
+package com.boost.springboostupex.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class MemberService {
+    
+    public void registerMember(String email) {
+        if (email == null || !isValidEmail(email)) {
+            throw new WrongEmailException("Invalid email: " + email);
+        }
+        // 이메일이 유효하면 회원 등록 로직을 수행
+    }
+
+    private boolean isValidEmail(String email) {
+        // 이메일 유효성 검사 로직
+    }
+}

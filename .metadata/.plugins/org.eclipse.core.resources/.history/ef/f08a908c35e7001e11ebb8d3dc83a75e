@@ -1,0 +1,21 @@
+package com.boost.springboostupex.service;
+
+import com.boost.springboostupex.dto.Member;
+import com.boost.springboostupex.dao.MemberDao;
+
+public class MemberService {
+    private MemberDao memberDao;
+
+    public MemberService(MemberDao memberDao) {
+        this.memberDao = memberDao;
+    }
+
+    public void registerMember(Member member) {
+        String email = member.getEmail();
+        if (memberDao.existsByEmail(email)) { // 이미 존재하는 이메일인지 확인
+            throw new WrongEmailException("Email already exists: " + email);
+        }
+        // 존재하지 않는 이메일이라면 회원 등록을 수행
+        memberDao.insert(member);
+    }
+}

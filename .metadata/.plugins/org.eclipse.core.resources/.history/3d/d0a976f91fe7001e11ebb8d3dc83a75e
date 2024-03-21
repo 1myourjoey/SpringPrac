@@ -1,0 +1,41 @@
+package com.boost.springboostupex.dao;
+
+public class Snippet {
+	<body>
+	    <h1>Add Person</h1>
+	    <form action="/save" method="post">
+	        Name: <input type="text" name="name"><br>
+	        Age: <input type="text" name="age"><br>
+	        Email: <input type="text" name="email"><br>
+	        Memo: <textarea name="memo"></textarea><br>
+	        <input type="submit" value="Submit">
+	    </form>
+	
+	    <hr>
+	
+	    <h1>Person List</h1>
+	    <table border="1">
+	        <thead>
+	            <tr>
+	                <th>ID</th>
+	                <th>Name</th>
+	                <th>Age</th>
+	                <th>Email</th>
+	                <th>Memo</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <c:forEach items="${people}" var="person">
+	                <tr>
+	                    <td>${person.id}</td>
+	                    <td>${person.name}</td>
+	                    <td>${person.age}</td>
+	                    <td>${person.email}</td>
+	                    <td>${person.memo}</td>
+	                </tr>
+	            </c:forEach>
+	        </tbody>
+	    </table>
+	</body>
+}
+

@@ -1,0 +1,42 @@
+package com.boost.springboostupex.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.boost.springboostupex.dao.MemberDao;
+import com.boost.springboostupex.dto.Member;
+
+@Controller
+public class MyController {
+	@Autowired
+	private MemberDao memberDao;
+	
+	@GetMapping("/")
+	public String root(Model model) {
+	    List<Member> members = memberDao.selectAll();
+	    model.addAttribute("members", members); // 모델에 회원 목록 추가
+	    return "root";
+	}
+	
+	 @PostMapping("/save")
+	    public String save(@RequestParam("name") String name,
+	                       @RequestParam("age") int age,
+	                       @RequestParam("email") String email,
+	                       @RequestParam("memo") String memo) {
+	        Member newMember = new Member(name, age, email, memo);
+	        memberDao.insert(newMember);
+	        return "redirect:/"; 
+	    }
+	 @GetMapping("/delete")
+	 public String deleteMember(@RequestParam("id") int memberId) {
+	     memberDao.delete(memberId);
+	     return "redirect:/";
+	 }
+	}
+

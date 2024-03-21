@@ -1,0 +1,5 @@
+package com.boost.springboostupex.dao;
+
+public class MemberDao {
+
+}

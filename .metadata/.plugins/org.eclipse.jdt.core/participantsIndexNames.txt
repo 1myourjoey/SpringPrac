@@ -1,0 +1,11 @@
+INDEX VERSION 1.134
+D:\_dev\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\502887469.index
+\_sp0313SpingMVC\src\main\java
+D:\_dev\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2632631341.index
+\todoList_servlet\src\main\java
+D:\_dev\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\115954697.index
+\springboostupex\src\main\java
+D:\_dev\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2991281586.index
+\_sp0313SpingMVC\src\main\java
+D:\_dev\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3129801786.index
+\sp0320\src\main\java

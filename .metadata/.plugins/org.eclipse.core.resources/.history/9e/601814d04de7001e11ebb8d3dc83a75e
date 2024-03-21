@@ -1,0 +1,5 @@
+package com.boost.springboostupex.service;
+
+public class EmailValidationService {
+
+}

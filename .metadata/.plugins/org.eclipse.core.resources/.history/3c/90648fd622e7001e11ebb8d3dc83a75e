@@ -1,0 +1,16 @@
+package com.boost.springboostupex.dao;
+
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+public class MemberDao {
+private JdbcTemplate jdbcTemplate;
+	
+	
+	public MemberDao(DataSource dataSource) {
+		super();
+		this.jdbcTemplate = new JdbcTemplate(dataSource);
+	}
+	
+}

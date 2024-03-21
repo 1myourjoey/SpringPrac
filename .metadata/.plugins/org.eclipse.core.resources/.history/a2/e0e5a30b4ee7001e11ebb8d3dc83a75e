@@ -1,0 +1,17 @@
+package com.boost.springboostupex.service;
+
+public class EmailValidationService {
+	 public void validateEmail(String email) {
+	        if (!isValidEmail(email)) {
+	            throw new WrongEmailException("Invalid email format: " + email);
+	        }
+	    }
+
+	    private boolean isValidEmail(String email) {
+	        // 이메일 형식 유효성 검사 로직을 구현하세요.
+	        // 예: 정규표현식을 사용하여 이메일 형식을 검증하거나, 외부 라이브러리를 사용할 수도 있습니다.
+	        // 여기서는 간단한 형식의 이메일 유효성 검사만을 가정합니다.
+	        return email != null && email.matches("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}");
+	    }
+	}
+

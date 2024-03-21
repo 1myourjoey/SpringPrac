@@ -1,0 +1,22 @@
+package com.boost.springboostupex.config;
+
+
+import javax.sql.DataSource;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.boost.springboostupex.dao.MemberDao;
+
+
+
+
+@Configuration
+public class AppCtx {
+
+	@Bean
+	public MemberDao memberDao() {
+		return MemberDao(DataSource dataSource);
+	}
+	
+}
